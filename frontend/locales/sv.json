@@ -1,0 +1,79 @@
+{
+  "pageTitle": "Receptvalvet",
+  "hero": {
+    "eyebrow": "Receptsamlare",
+    "title": "Spara alla recept på ett ställe.",
+    "description": "Klistra in en receptlänk så hämtar vi, normaliserar och presenterar det i en ren, konsekvent layout som du kan bläddra och filtrera.",
+    "badge": "MariaDB-backend · Eyevinn OSC"
+  },
+  "addRecipe": {
+    "eyebrow": "Lägg till recept",
+    "title": "Importera från URL",
+    "refresh": "↻ Uppdatera",
+    "urlLabel": "Recept-URL",
+    "urlPlaceholder": "https://exempel.se/mitt-favoritrecept",
+    "save": "Spara",
+    "hint": "Vi hämtar strukturerad data (schema.org/Recipe) när det finns tillgängligt och städar sedan upp formateringen."
+  },
+  "collection": {
+    "eyebrow": "Din samling",
+    "title": "Recept",
+    "filterPlaceholder": "Filtrera på titel eller URL"
+  },
+  "archived": {
+    "eyebrow": "Arkiverade",
+    "title": "Arkiverade recept"
+  },
+  "preview": {
+    "eyebrow": "Förhandsgranskning",
+    "title": "Enhetlig receptvy",
+    "emptyState": "Välj ett recept för att se det normaliserade formatet.",
+    "sectionTitle": "Förhandsgranskning"
+  },
+  "recipeCard": {
+    "noDescription": "Ingen beskrivning",
+    "archive": "Arkivera",
+    "unarchive": "Återställ",
+    "noRecipes": "Inga recept hittades."
+  },
+  "recipeDetail": {
+    "edit": "✏️ Redigera",
+    "editTitle": "Redigera recept",
+    "total": "Totalt",
+    "prep": "Förberedelse",
+    "cook": "Tillagning",
+    "servings": "Portioner",
+    "noIngredients": "Inga ingredienser hämtade",
+    "noInstructions": "Inga instruktioner hämtade",
+    "descriptionPlaceholder": "Beskrivning",
+    "servingsPlaceholder": "Portioner",
+    "totalTimePlaceholder": "Total tid",
+    "prepTimePlaceholder": "Förberedelsetid",
+    "cookTimePlaceholder": "Tillagningstid",
+    "ingredientsPlaceholder": "Ingredienser (en per rad)",
+    "instructionsPlaceholder": "Instruktioner (en per rad)",
+    "saveChanges": "Spara ändringar"
+  },
+  "status": {
+    "loading": "Laddar recept…",
+    "loaded": "Laddade {active} aktiva och {archived} arkiverade recept.",
+    "loadedSingular": "Laddade {active} aktivt och {archived} arkiverat recept.",
+    "archived": "Receptet arkiverat.",
+    "unarchived": "Receptet återställt.",
+    "updated": "Receptet uppdaterat.",
+    "saved": "Receptet sparat.",
+    "fetching": "Hämtar recept…",
+    "requestFailed": "Förfrågan misslyckades"
+  },
+  "errors": {
+    "urlRequired": "URL krävs",
+    "invalidUrl": "Ogiltig URL",
+    "recipeAlreadySaved": "Receptet är redan sparat",
+    "recipeNotFound": "Receptet hittades inte"
+  },
+  "language": {
+    "select": "Språk",
+    "en": "English",
+    "sv": "Svenska"
+  }
+}

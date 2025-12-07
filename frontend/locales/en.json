@@ -1,0 +1,79 @@
+{
+  "pageTitle": "Recipe Vault",
+  "hero": {
+    "eyebrow": "Food Recipe Collector",
+    "title": "Save every recipe in one modern place.",
+    "description": "Drop any recipe link, we normalize it, store it, and present it in a clean, consistent layout you can browse and filter.",
+    "badge": "MariaDB-backed · Eyevinn OSC"
+  },
+  "addRecipe": {
+    "eyebrow": "Add recipe",
+    "title": "Import from URL",
+    "refresh": "↻ Refresh",
+    "urlLabel": "Recipe URL",
+    "urlPlaceholder": "https://example.com/my-favorite-recipe",
+    "save": "Save",
+    "hint": "We fetch structured data (schema.org/Recipe) when available, then clean up formatting."
+  },
+  "collection": {
+    "eyebrow": "Your collection",
+    "title": "Recipes",
+    "filterPlaceholder": "Filter by title or URL"
+  },
+  "archived": {
+    "eyebrow": "Archived",
+    "title": "Archived recipes"
+  },
+  "preview": {
+    "eyebrow": "Preview",
+    "title": "Unified recipe view",
+    "emptyState": "Select a recipe to see the normalized format.",
+    "sectionTitle": "Preview"
+  },
+  "recipeCard": {
+    "noDescription": "No description",
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "noRecipes": "No recipes found."
+  },
+  "recipeDetail": {
+    "edit": "✏️ Edit",
+    "editTitle": "Edit recipe",
+    "total": "Total",
+    "prep": "Prep",
+    "cook": "Cook",
+    "servings": "Servings",
+    "noIngredients": "No ingredients captured",
+    "noInstructions": "No instructions captured",
+    "descriptionPlaceholder": "Description",
+    "servingsPlaceholder": "Servings",
+    "totalTimePlaceholder": "Total time",
+    "prepTimePlaceholder": "Prep time",
+    "cookTimePlaceholder": "Cook time",
+    "ingredientsPlaceholder": "Ingredients (one per line)",
+    "instructionsPlaceholder": "Instructions (one per line)",
+    "saveChanges": "Save changes"
+  },
+  "status": {
+    "loading": "Loading recipes…",
+    "loaded": "Loaded {active} active and {archived} archived recipe(s).",
+    "loadedSingular": "Loaded {active} active and {archived} archived recipe.",
+    "archived": "Recipe archived.",
+    "unarchived": "Recipe unarchived.",
+    "updated": "Recipe updated.",
+    "saved": "Recipe saved.",
+    "fetching": "Fetching recipe…",
+    "requestFailed": "Request failed"
+  },
+  "errors": {
+    "urlRequired": "URL is required",
+    "invalidUrl": "Invalid URL",
+    "recipeAlreadySaved": "Recipe already saved",
+    "recipeNotFound": "Recipe not found"
+  },
+  "language": {
+    "select": "Language",
+    "en": "English",
+    "sv": "Svenska"
+  }
+}

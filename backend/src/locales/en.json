@@ -1,0 +1,6 @@
+{
+  "urlRequired": "URL is required",
+  "invalidUrl": "Invalid URL",
+  "recipeAlreadySaved": "Recipe already saved",
+  "recipeNotFound": "Recipe not found"
+}

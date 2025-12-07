@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="pageTitle">Recipe Vault</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <div>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Food Recipe Collector</p>
+          <h1 data-i18n="hero.title">Save every recipe in one modern place.</h1>
+          <p class="lede" data-i18n="hero.description">
+            Drop any recipe link, we normalize it, store it, and present it in a clean, consistent
+            layout you can browse and filter.
+          </p>
+        </div>
+        <div class="hero__actions">
+          <div class="language-switcher">
+            <label for="language-select" data-i18n="language.select">Language</label>
+            <select id="language-select">
+              <option value="en">English</option>
+              <option value="sv">Svenska</option>
+            </select>
+          </div>
+          <div class="hero__badge" data-i18n="hero.badge">MariaDB-backed · Eyevinn OSC</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow" data-i18n="addRecipe.eyebrow">Add recipe</p>
+            <h2 data-i18n="addRecipe.title">Import from URL</h2>
+          </div>
+          <button id="reload-btn" class="ghost-btn" data-i18n="addRecipe.refresh">↻ Refresh</button>
+        </div>
+        <form id="add-form" class="stack">
+          <label class="field">
+            <span data-i18n="addRecipe.urlLabel">Recipe URL</span>
+            <div class="field__row">
+              <input type="url" name="url" data-i18n-placeholder="addRecipe.urlPlaceholder" placeholder="https://example.com/my-favorite-recipe" required />
+              <button type="submit" class="primary" data-i18n="addRecipe.save">Save</button>
+            </div>
+          </label>
+          <p class="hint" data-i18n="addRecipe.hint">
+            We fetch structured data (schema.org/Recipe) when available, then clean up formatting.
+          </p>
+          <div id="status" class="status"></div>
+        </form>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow" data-i18n="collection.eyebrow">Your collection</p>
+            <h2 data-i18n="collection.title">Recipes</h2>
+          </div>
+          <div class="filter">
+            <input id="filter" type="text" data-i18n-placeholder="collection.filterPlaceholder" placeholder="Filter by title or URL" />
+          </div>
+        </div>
+        <ul id="recipes-list" class="recipes-list"></ul>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow" data-i18n="archived.eyebrow">Archived</p>
+            <h2 data-i18n="archived.title">Archived recipes</h2>
+          </div>
+        </div>
+        <ul id="archived-list" class="recipes-list"></ul>
+      </section>
+
+      <section class="panel detail-panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow" data-i18n="preview.eyebrow">Preview</p>
+            <h2 data-i18n="preview.title">Unified recipe view</h2>
+          </div>
+        </div>
+        <div id="recipe-detail" class="recipe-detail empty">
+          <p data-i18n="preview.emptyState">Select a recipe to see the normalized format.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
