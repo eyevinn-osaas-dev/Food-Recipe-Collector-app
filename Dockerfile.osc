@@ -1,0 +1,40 @@
+FROM node:20.18.1-slim
+
+# Install bash (required for OSC entrypoint)
+RUN apt-get update && apt-get install -y bash && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy package files
+COPY backend/package*.json ./
+
+# Install dependencies
+RUN npm ci --only=production
+
+# Copy backend source
+COPY backend/src/ ./src/
+
+# Copy frontend files to the correct location where the app expects them
+COPY frontend/ ../frontend/
+
+# Add OSC entrypoint script for configuration
+COPY --chmod=755 osc-entrypoint.sh /usr/local/bin/osc-entrypoint.sh
+
+# Create non-root user
+RUN groupadd -r appuser && useradd -r -g appuser appuser
+
+# Change ownership of app directory and parent directory for frontend access
+RUN chown -R appuser:appuser /app && chown -R appuser:appuser /frontend
+
+# Switch to non-root user
+USER appuser
+
+# Expose port
+EXPOSE 8080
+
+# Set environment variable for port
+ENV PORT=8080
+
+# Set entrypoint
+ENTRYPOINT ["/usr/local/bin/osc-entrypoint.sh"]
+CMD ["node", "src/index.js"]
